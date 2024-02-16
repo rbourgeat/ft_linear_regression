@@ -1,10 +1,12 @@
 # ft_linear_regression
 You will code a program that can predict the price of a car using linear regression with a gradient algorithm.
 
+![Figure_1](./Figure_1.png)
+
 ## Requirements
 
 ```bash
-python3 -m install numpy
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -12,7 +14,11 @@ python3 -m install numpy
 - Predict program:
 
 ```bash
-python3 predict.py file.csv
+python3 predict.py
 ```
 
-> Info: The predict csv file is optional, by default the program use the `data.csv` file.
+- Learn program:
+
+```bash
+python3 learn.py
+```
