@@ -6,10 +6,11 @@
 #    By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/16 16:18:11 by rbourgea          #+#    #+#              #
-#    Updated: 2024/02/19 14:49:15 by rbourgea         ###   ########.fr        #
+#    Updated: 2024/02/19 15:32:38 by rbourgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -49,6 +50,9 @@ def get_averrage_error(mileages, targets, theta0, theta1):
 	return (1 / m) * np.sum(errors)
 
 def main():
+	if not os.path.exists("./data.csv"):
+		print("Error: data.csv file not found.")
+		return
 	data = pd.read_csv("./data.csv")
 	max_km, max_price = normalize(data)
 	data = data.values
