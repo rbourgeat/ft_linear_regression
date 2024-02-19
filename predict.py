@@ -6,13 +6,17 @@
 #    By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/16 16:18:18 by rbourgea          #+#    #+#              #
-#    Updated: 2024/02/16 16:50:19 by rbourgea         ###   ########.fr        #
+#    Updated: 2024/02/19 12:59:39 by rbourgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import csv
 import numpy as np
 from typing import Tuple
+
+def save_weights(theta0, theta1):
+	np.save("weights", np.array([theta0, theta1]))
+	print("Weigths saved in weights.npy file !")
 
 def load_model_weights():
 	try:
